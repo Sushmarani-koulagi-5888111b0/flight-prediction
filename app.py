@@ -1,9 +1,8 @@
 from flask import Flask, request, render_template
 from flask_cors import cross_origin
 import sklearn
-import joblib
 import pandas as pd
-
+from sklearn.externals import joblib
 
 app = Flask(__name__)
 model = joblib.load(open("c1_flight_rf.joblib", "rb"))
